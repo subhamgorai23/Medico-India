@@ -1,0 +1,170 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 01-May-2024, 8:21:40 pm
+    Author     : subhamgorai
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    /* position: fixed; */
+    width:100vw;
+    height:auto;
+    overflow-y: auto;
+    background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
+}
+.nav{
+    /* position: sticky; */
+    width: 100vw;
+    min-height: 25vh;
+    /* border: 1px solid black; */
+    /* background-color: aliceblue; */
+    background-image: linear-gradient( 92.7deg,  rgba(245,212,212,1) 8.5%, rgba(252,251,224,1) 90.2% );
+}
+.navItems{
+    display: flex;
+    list-style: none;
+    justify-content:space-evenly;
+    align-items:flex-end;
+    /* gap: 30px; */
+}
+.navHeading{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+    height:100%;
+}
+.nav .navText #heading{
+    font-size: 4.5rem;
+    font-family: 'Righteous', serif;
+    font-weight:initial;
+    background: -webkit-linear-gradient(0deg, #615d5d 0%, #d875ec 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav .navText #tagLine{
+    font-weight:initial;
+    background: -webkit-linear-gradient(0deg,black,pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.2rem;
+    text-align: end;
+}
+.navtag{
+    display: flex;
+    justify-content: space-evenly;
+}
+.navtag a{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color:darkcyan;
+    text-shadow:2px 2px 5px rgba(146, 144, 144, 0.899);
+}
+.navLogo{
+    width: 20%;
+    height:100%;
+}
+.img{
+    /* padding-bottom: 0.3em; */
+    width:60%;
+    min-height:100% ;
+}
+.idk{
+    width: 20%;
+    height: 100%;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      /* position:relative; */
+    width:90vw;
+    height:80vh;
+    /* border: 1px solid salmon; */
+    margin: auto;
+    overflow-y: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 035) 0px -2px 6px 0px inset;
+}
+.box{
+    width: 350px;
+    height: 480px;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #caa9a9;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+  #headLine{
+    color:rgb(18, 131, 93);
+    font-size: 2rem;
+    text-align: center;
+  }
+  button {
+    background-color: #168b61;
+    color: white;
+    padding: 15px 15px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 25px;
+  }
+  
+  button:hover {
+    opacity: 0.7;
+  }  
+.box a{
+    text-decoration: none;
+}
+.footerbox{
+    background-color: #0093E9;
+    background-image: linear-gradient( 92.7deg,  rgba(245,212,212,1) 8.5%, rgba(252,251,224,1) 90.2% );
+    min-height: 5vh;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* .footerbox .wrapper{
+    display:flex;
+    gap: 40px;
+}
+.footerbox .wrapper .button:nth-child(1){
+    color:rgb(49, 49, 251);
+}
+.footerbox .wrapper .button:nth-child(2){
+    color:rgb(230, 42, 136);
+}
+.footerbox .wrapper .button:nth-child(3){
+    color:rgb(41, 187, 240);
+}
+.footerbox .wrapper .button:nth-child(4){
+    color:rgb(220, 14, 14);
+} */
+.footerLine{
+    font-size: 0.8rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:darkcyan;
+}

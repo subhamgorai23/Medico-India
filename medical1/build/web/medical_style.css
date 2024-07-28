@@ -1,0 +1,48 @@
+body{
+    background-image: url("medical.jpeg");
+    background-size: cover;
+    }
+    .navbar{
+        background-color:#333;
+        color:#fff;
+        padding:10px 20px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    .navbar-brand{
+        display:flex;
+        flex-direction:column;
+    }
+    .website-name{
+        font-weight:bold;
+        font-size:26px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    .tagline{
+        font-size:12px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    .logo{
+        margin-right: auto;
+    }
+    .logo img{
+        width:50px;
+        height:auto;
+    }
+    .buttons{
+        display:flex;
+    }
+    .oval-button{
+        border:none;
+        border-radius:20px;
+        padding:10px 20px;
+        margin-left:10px;
+        background-color:#007bff;
+        color:#fff;
+        cursor:pointer;
+        text-decoration: none;
+    }
+    .oval-button:hover{
+        background-color:rgb(185, 217, 244);
+    }

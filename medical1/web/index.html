@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="medical_style.css">
+    <style>
+        body {
+            background-image: url("medical.jpeg");
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color:dimgray; /* Transparent blue */
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: auto;
+        }
+
+        .website-name {
+            font-weight: bold;
+            font-size: 24px;
+            margin-left: 10px;
+        }
+
+        .tagline {
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+        .buttons {
+            display: flex;
+        }
+
+        .oval-button {
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin-left: 10px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .oval-button a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .oval-button:hover {
+            background-color: #0056b3;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.7); /* Transparent white */
+            border-radius: 10px;
+        }
+
+        .service {
+            position: relative;
+            flex: 1 1 200px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, filter 0.3s;
+            color:#333 /* Text color for readability over the background images */
+        }
+
+        .service::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 0;
+            border-radius: 10px;
+            transition: filter 0.3s;
+        }
+
+        .service:hover::before {
+            filter: blur(5px);
+        }
+
+        .service h3 {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 15px;
+        }
+
+        .service p,
+        .service a {
+            position: relative;
+            z-index: 1;
+            color:darkslategrey
+        }
+
+        .service a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .service a:hover {
+            color: #0056b3;
+        }
+
+        .service-doctor::before {
+            background-image: url("doctor.jpeg");
+        }
+
+        .service-ambulance::before {
+            background-image: url("ambulance_1.jpg");
+        }
+
+        .service-medical-shop::before {
+            background-image: url("medical_shop_background.jpg");
+        }
+
+        .service-path-lab::before {
+            background-image: url("pathology.jpg");
+        }
+
+        .service-blood-bank::before {
+            background-image: url("blood_bank_background.jpg");
+        }
+
+        .service-hospital::before {
+            background-image: url("hospital_background.jpg");
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 768px) {
+            .service {
+                flex-basis: calc(50% - 20px);
+            }
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <div class="logo"><img src="mlogo.jpg" alt="Logo"></div>
+            <div>
+                <div class="website-name">Medico India</div>
+                <div class="tagline">your life is our priority</div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="oval-button"><a href="login.jsp">Log in</a></button>
+            <button class="oval-button"><a href="registration.jsp">Signup</a></button>
+            <button class="oval-button">Explore</button>
+            <button class="oval-button">Contact Us</button>
+            <button class="oval-button">Review</button>
+        </div>
+    </nav>
+
+    <div class="services">
+        <div class="service service-doctor">
+            <h3>Doctor Search & Appointment</h3>
+            <p>Find and book appointments with doctors in your area.</p>
+            <a href="doctor_search.jsp">Learn More</a>
+        </div>
+        <div class="service service-ambulance">
+            <h3>Ambulance Search</h3>
+            <p>Locate and book ambulance services quickly.</p>
+            <a href="ambulance_search.jsp">Learn More</a>
+        </div>
+        <div class="service service-medical-shop">
+            <h3>Medical Shop Search</h3>
+            <p>Find medical shops near you.</p>
+            <a href="medical_shop_search.jsp">Learn More</a>
+        </div>
+        <div class="service service-path-lab">
+            <h3>Pathological Lab Search</h3>
+            <p>Search for pathological labs in your vicinity.</p>
+            <a href="path_lab_search.jsp">Learn More</a>
+        </div>
+        <div class="service service-blood-bank">
+            <h3>Blood Bank Search</h3>
+            <p>Find nearby blood banks.</p>
+            <a href="bloodbank_search.jsp">Learn More</a>
+        </div>
+        <div class="service service-hospital">
+            <h3>Hospital Search</h3>
+            <p>Locate hospitals near you.</p>
+            <a href="hospital_search.jsp">Learn More</a>
+        </div>
+    </div>
+</body>
+</html>
