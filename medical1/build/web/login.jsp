@@ -15,7 +15,7 @@
         }
 
         .navbar {
-            background-color:dimgray; /* Transparent blue */
+            background-color: rgba(0, 123, 255, 0.7);/* Transparent black */
             color: #fff;
             padding: 10px 20px;
             display: flex;
@@ -57,7 +57,7 @@
             border-radius: 20px;
             padding: 10px 20px;
             margin-left: 10px;
-            background-color: #007bff;
+            background-color:cornflowerblue;
             color: #fff;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -159,7 +159,7 @@
                 <input type="submit" value="LOGIN" />
                 <div class="login-links">
                     <a href="registration.jsp">New User?</a>
-                    <a href="#">Forget Password?</a>
+                    <a href="forgetpass.jsp">Forget Password?</a>
                 </div>
             </form>
   

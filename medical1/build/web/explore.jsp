@@ -54,7 +54,7 @@
             border-radius: 20px;
             padding: 10px 20px;
             margin-left: 10px;
-            background-color: #007bff;
+            background-color:cornflowerblue;
             color: #fff;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -148,7 +148,7 @@
         }
 
         .service-medical-shop::before {
-            background-image: url("medicalshop.jpg");
+            background-image: url("medical.jpg");
         }
 
         .service-path-lab::before {
@@ -156,7 +156,7 @@
         }
 
         .service-blood-bank::before {
-            background-image: url("bb.jpg");
+            background-image: url("bb.jpeg");
         }
 
         .service-hospital::before {
@@ -168,7 +168,7 @@
 <body>
     <nav class="navbar">
         <div class="navbar-brand">
-            <div class="logo"><img src="logo.jpeg" alt="Logo"></div>
+            <div class="logo"><img src="mlogo.jpg" alt="Logo"></div>
             <div>
                 <div class="website-name">Medico India</div>
                 <div class="tagline">your life is our priority</div>
@@ -187,39 +187,33 @@
         <div class="service service-doctor">
             <h3>Doctor Search & Appointment</h3>
             <p>Find and book appointments with doctors in your area.</p>
-            <button onclick="window.location.href='docsearch.jsp'">Search</button>
+            <button onclick="window.location.href='doctorSearch.jsp'">Search</button>
         </div>
         <div class="service service-ambulance">
             <h3>Ambulance Search</h3>
             <p>Locate and book ambulance services quickly.</p>
-            <button onclick="window.location.href='login.jsp'">Search</button>
+            <button onclick="window.location.href='ambulancesearch.jsp'">Search</button>
         </div>
         <div class="service service-medical-shop">
             <h3>Medical Shop Search</h3>
             <p>Find medical shops near you.</p>
-            <button onclick="window.location.href='login.jsp'">Search</button>
+            <button onclick="window.location.href='medicineshopsearch.jsp'">Search</button>
         </div>
         <div class="service service-path-lab">
             <h3>Pathological Lab Search</h3>
             <p>Search for pathological labs in your vicinity.</p>
-            <button onclick="window.location.href='login.jsp'">Search</button>
+            <button onclick="window.location.href='pathologysearch.jsp'">Search</button>
         </div>
         <div class="service service-blood-bank">
             <h3>Blood Bank Search</h3>
             <p>Find nearby blood banks.</p>
-            <button onclick="window.location.href='login.jsp'">Search</button>
+            <button onclick="window.location.href='bloodbanksearch.jsp'">Search</button>
         </div>
         <div class="service service-hospital">
             <h3>Hospital Search</h3>
             <p>Locate hospitals near you.</p>
-            <button onclick="window.location.href='login.jsp'">Search</button>
+            <button onclick="window.location.href='hospitalsearch.jsp'">Search</button>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Medico India. All rights reserved.</p>
-        <p><a href="privacy.jsp" style="color: #fff;">Privacy Policy</a> | <a href="terms.jsp" style="color: #fff;">Terms of Service</a></p>
-        <a href="#top" class="back-to-top">Back to Top</a>
-    </footer>
 </body>
 </html>

@@ -1,8 +1,3 @@
-<%-- 
-    Document   : doctorSearch
-    Created on : 19-Jul-2024, 9:13:42 pm
-    Author     : subhamgorai
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.sql.Connection, java.sql.DriverManager, java.sql.PreparedStatement, java.sql.ResultSet" %>
 <!DOCTYPE html>
@@ -57,7 +52,7 @@
             border-radius: 20px;
             padding: 10px 20px;
             margin-left: 10px;
-            background-color: #007bff;
+            background-color:cornflowerblue;
             color: #fff;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -78,6 +73,7 @@
             align-items: center;
             height: calc(100vh - 50px); /* Adjusted height */
             margin-top: 0px; /* Smaller gap */
+            flex-direction: column; /* Adjusted to allow stacking of login box and results */
         }
 
         .login-box {
@@ -87,9 +83,20 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 66.67%; /* Two-thirds of the original size */
             max-width: 400px; /* Maximum width to ensure it doesn't get too large on big screens */
+            margin-bottom: 20px; /* Added margin to separate from results */
         }
 
-        .login-box h1 {
+        .results-box {
+            background: rgba(255, 255, 255, 0.8); /* Transparent white */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 66.67%; /* Two-thirds of the original size */
+            max-width: 600px; /* Maximum width to ensure it doesn't get too large on big screens */
+        }
+
+        .login-box h1,
+        .results-box h1 {
             text-align: center;
             margin-bottom: 20px;
         }
@@ -133,13 +140,21 @@
         .login-links a:hover {
             text-decoration: underline;
         }
+
+        .result {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #fff;
+        }
     </style>
 </head>
 <body>
     <div class="navbar">
         <div class="navbar-brand">
             <div class="logo">
-                <img src="mlogo.jpeg" alt="Logo">
+                <img src="mlogo.jpg" alt="Logo">
             </div>
             <div class="website-name">Medico India</div>
             <div class="tagline">your life is our priority</div>
@@ -154,11 +169,56 @@
             <h1>DOCTOR SEARCH</h1>
             <form method="post">
                 <input type="text" name="dc" placeholder="Enter City" required />
-                <input type="password" name="ds" placeholder="Enter specialization" required />
+                <input type="text" name="ds" placeholder="Enter specialization" required />
                 <input type="submit" value="SEARCH" />
                 <div class="login-links">
                 </div>
             </form>
+        </div>
+        <div class="results-box">
+            <h1>Search Results</h1>
+            <%
+                String city = request.getParameter("dc");
+                String spec = request.getParameter("ds");
+                if (city != null && spec != null) {
+                    try {
+                        Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/medical", "root", "subham23");
+                        String query = "select * from doctor where dcity=? and dspecialization=?";
+                        PreparedStatement p = con.prepareStatement(query);
+                        p.setString(1, city);
+                        p.setString(2, spec);
+                        ResultSet r = p.executeQuery();
+                        while (r.next()) {
+                            String name = r.getString("dname");
+                            String contact = r.getString("dcontact");
+                            String address = r.getString("daddr");
+                            String city1 = r.getString("dcity");
+                            String cham = r.getString("dchamber");
+                            String spec1 = r.getString("dspecialization"); // Corrected from sepc1 to spec1
+                            String deg = r.getString("ddegree");
+                            String mail = r.getString("dmail");
+            %>
+                            <div class="result">
+                                <p><strong>Name:</strong> <%= name %></p>
+                                <p><strong>Contact:</strong> <%= contact %></p>
+                                <p><strong>Address:</strong> <%= address %></p>
+                                <p><strong>City:</strong> <%= city1 %></p>
+                                <p><strong>Chamber:</strong> <%= cham %></p>
+                                <p><strong>Specialization:</strong> <%= spec1 %></p>
+                                <p><strong>Degree:</strong> <%= deg %></p>
+                                <p><strong>Email:</strong> <%= mail %></p>
+                            </div>
+            <%
+                        }
+                        r.close();
+                        p.close();
+                        con.close();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            %>
         </div>
     </div>
 </body>

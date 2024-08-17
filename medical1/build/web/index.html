@@ -12,14 +12,14 @@
         }
 
         .navbar {
-            background-color:dimgray; /* Transparent blue */
+            background-color: rgba(0, 123, 255, 0.7); /* Transparent blue */
             color: #fff;
             padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-     
+
         .navbar-brand {
             display: flex;
             align-items: center;
@@ -50,7 +50,7 @@
             border-radius: 20px;
             padding: 10px 20px;
             margin-left: 10px;
-            background-color: #007bff;
+            background-color:cornflowerblue;           
             color: #fff;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -77,17 +77,16 @@
 
         .service {
             position: relative;
-            flex: 1 1 200px;
+            flex: 1 1 calc(30% - 20px); /* Three services per row */
             margin: 10px;
-            padding: 20px;
+            padding: 15px; /* Reduced padding */
             text-align: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+            height: 200px; /* Fixed height for square shape */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, filter 0.3s;
-            color:#333 /* Text color for readability over the background images */
+            color: black; /* Change text color to black */
+            overflow: hidden; /* Prevent overflow */
         }
 
         .service::before {
@@ -103,28 +102,26 @@
         }
 
         .service:hover::before {
-            filter: blur(7px);
+            filter: blur(5px);
         }
 
         .service h3 {
             position: relative;
             z-index: 1;
             margin-bottom: 15px;
-            color:black;
         }
 
         .service p,
         .service a {
             position: relative;
             z-index: 1;
-            color:#333;
+            color:darkslategrey
         }
 
         .service a {
             text-decoration: none;
-            color: #fff;
-            font-weight: bold;
             color:#0093E9;
+            font-weight: bold;
         }
 
         .service a:hover {
@@ -167,7 +164,7 @@
 <body>
     <nav class="navbar">
         <div class="navbar-brand">
-            <div class="logo"><img src="mlogo.png" alt="Logo"></div>
+            <div class="logo"><img src="mlogo.jpg" alt="Logo"></div>
             <div>
                 <div class="website-name">Medico India</div>
                 <div class="tagline">your life is our priority</div>
@@ -176,9 +173,9 @@
         <div class="buttons">
             <button class="oval-button"><a href="login.jsp">Log in</a></button>
             <button class="oval-button"><a href="registration.jsp">Signup</a></button>
-            <button class="oval-button">Explore</button>
-            <button class="oval-button">Contact Us</button>
-            <button class="oval-button">Review</button>
+            <button class="oval-button"><a href="explore.jsp">Explore</a></button>
+            <button class="oval-button"><a href="contactus.jsp">Contact Us</a></button>
+            <button class="oval-button"><a href="review.jsp">Review</a></button>
         </div>
     </nav>
 
